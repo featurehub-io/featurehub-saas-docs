@@ -1,0 +1,8 @@
+name: featurehub-saas
+version: 1.0.0
+start_page: ROOT:index.adoc
+title: FeatureHub SaaS
+prerelease: -rc
+# comment
+nav:
+- modules/ROOT/nav.adoc
