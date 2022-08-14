@@ -1,1 +1,7 @@
-= Welcome to FH SaaS
+= FeatureHub SaaS Documentation
+
+== Overview
+
+image::fh_primary_navy.png[Feature Hub,500]
+
+https://www.featurehub.io/[FeatureHub] is a SaaS platform that helps software teams to manage their features, from feature flags (also known as feature toggles) to A/B experiments and remote or centralised configuration.
