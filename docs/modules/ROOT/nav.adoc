@@ -7,7 +7,7 @@
 * xref:featurehub:ROOT:service-accounts.adoc[Service Accounts]
 
 .FeatureHub Management Via an API
-* xref:featurehub:ROOT:admin-service-accounts.adoc[Admin Service Accounts]
+* xref:latest@featurehub:ROOT:admin-service-accounts.adoc[Admin Service Accounts]
 * xref:featurehub:ROOT:admin-development-kit.adoc[Admin Software Development Kits]
 
 .FeatureHub Identity Management
