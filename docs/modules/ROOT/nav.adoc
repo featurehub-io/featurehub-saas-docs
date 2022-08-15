@@ -1,24 +1,24 @@
 .FeatureHub Key Concepts
 * xref:index.adoc[Overview]
-* xref:featurehub:key-concepts.adoc[Key Concepts]
-* xref:featurehub:strategies.adoc[Rollout Strategy and User Targeting]
-* xref:featurehub:user-groups.adoc[User Groups and Permissions]
-* xref:featurehub:site-administration.adoc[Site Administration]
-* xref:featurehub:service-accounts.adoc[Service Accounts]
+* xref:featurehub:ROOT:key-concepts.adoc[Key Concepts]
+* xref:featurehub:ROOT:strategies.adoc[Rollout Strategy and User Targeting]
+* xref:featurehub:ROOT:user-groups.adoc[User Groups and Permissions]
+* xref:featurehub:ROOT:site-administration.adoc[Site Administration]
+* xref:featurehub:ROOT:service-accounts.adoc[Service Accounts]
 
 .FeatureHub Management Via an API
-* xref:featurehub:admin-service-accounts.adoc[Admin Service Accounts]
-* xref:featurehub:admin-development-kit.adoc[Admin Software Development Kits]
+* xref:featurehub:ROOT:admin-service-accounts.adoc[Admin Service Accounts]
+* xref:featurehub:ROOT:admin-development-kit.adoc[Admin Software Development Kits]
 
 .FeatureHub Identity Management
 * xref:saml.adoc[SAML Configuration]
 
 .FeatureHub SDKs
-* xref:featurehub:sdks.adoc[Software Development Kits]
-* xref:featurehub:sdks-development.adoc[Developing an SDK]
+* xref:featurehub:ROOT:sdks.adoc[Software Development Kits]
+* xref:featurehub:ROOT:sdks-development.adoc[Developing an SDK]
 
 .Analytics
-* xref:featurehub:analytics.adoc[Google Analytics Integration]
+* xref:featurehub:ROOT:analytics.adoc[Google Analytics Integration]
 
 .Pricing & Billing
 * xref:pricing.adoc[Pricing & Billing Explained]
