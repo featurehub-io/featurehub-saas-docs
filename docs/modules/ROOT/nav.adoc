@@ -1,6 +1,6 @@
 .FeatureHub Key Concepts
 * xref:index.adoc[Overview]
-* xref:1.5.9@featurehub:ROOT:key-concepts.adoc[Key Concepts]
+* xref:featurehub:ROOT:key-concepts.adoc[Key Concepts]
 * xref:1.5.9@featurehub:ROOT:strategies.adoc[Rollout Strategy and User Targeting]
 * xref:1.5.9@featurehub:ROOT:user-groups.adoc[User Groups and Permissions]
 * xref:1.5.9@featurehub:ROOT:site-administration.adoc[Site Administration]
