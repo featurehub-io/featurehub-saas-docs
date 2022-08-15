@@ -22,3 +22,7 @@
 
 .Pricing & Billing
 * xref:pricing.adoc[Pricing & Billing Explained]
+
+
+.FH Navigation
+* xref:1.5.9@featurehub:ROOT:nav.adoc[Test]
