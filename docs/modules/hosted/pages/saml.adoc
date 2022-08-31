@@ -1,68 +1,53 @@
+= SSO (Single sign-on) / SAML setup
+
 == Azure AD SSO/SAML setup
 
 1. Create FeatureHub application in the "Enterprise Applications" page and go to the Single Sign-On setup screen.
-
-image::saml/azure5.png[Azure-saml-featurehub,600]
+    image:azure5.png[Azure-saml-featurehub,600]
 
 1. Provide the following URls in the Basic SAML configuration section. Note, we used "banana" here as an example, this is usually your organisation name:
-
-image::saml/azure3.png[Azure-saml-featurehub,600]
+    image:azure3.png[Azure-saml-featurehub,600]
 
 1. Provide the following additional details in Attributes & Claims section:
-
-image::saml/azure4.png[Azure-saml-featurehub,600]
+    image:azure4.png[Azure-saml-featurehub,600]
 
 
 1. Make sure the correct option is selected for the certificate setting:
-
-image::saml/azure1.png[Azure-saml-featurehub,600]
+    image:azure1.png[Azure-saml-featurehub,600]
 
 1. Copy the following URLs and a certificate and insert them in your FeatureHub Saml/SSO settings page. Suffix field is usually your organization name:
-
-image::saml/azure2.png[Azure-saml-featurehub,600]
-
-image::saml/saml-urls.png[Azure-saml-featurehub,600]
-
-Certificate example:
-
-image::saml/saml2-cert.png[Azure-saml-featurehub,600]
+    image:azure2.png[Azure-saml-featurehub,600]
+    image:saml-urls.png[Azure-saml-featurehub,600]
+    *Certificate example*
+    image:saml2-cert.png[Azure-saml-featurehub,600]
 
 
 1. Once you save the settings, copy the Sign In URL from the page, this will be where your users should go to sign in.
-
-image::saml/saml1.png[Azure-saml-featurehub,600]
+    image:saml1.png[Azure-saml-featurehub,600]
 
 == Google IDP SAML/SSO setup
 
 1. Follow steps 1-5 https://apps.google.com/supportwidget/articlehome?hl=en&article_url=https%3A%2F%2Fsupport.google.com%2Fa%2Fanswer%2F6087519%3Fhl%3Den&product_context=6087519&product_name=UnuFlow&trigger_context=a[here]
 
 1. Provide the following details on the Google Identity Provider Page:
-
-ACS URL: https://app.featurehub.dev/saml/your-company-name/sso
-Entity ID: https://app.featurehub.dev/saml/your-company-name/metadata
-Start URL: https://app.featurehub.dev/saml/your-company-name/auth
-
-Note, "your-company-name" value will be the "suffix" value when you provide SSO setup details on the FeatureHub settings.
+        * `ACS URL: https://app.featurehub.dev/saml/your-company-name/sso`
+        * `Entity ID: https://app.featurehub.dev/saml/your-company-name/metadata`
+        * `Start URL: https://app.featurehub.dev/saml/your-company-name/auth`
+        ** Note: "your-company-name" value should be the same as "suffix" value when you provide SSO setup details on the FeatureHub settings.
 
 1. Check the box: "Signed response"
-
-image::saml/google-sso1.png[Google-sso-featurehub,600]
+    image:google-sso1.png[Google-sso-featurehub,600]
 
 1. Provide additional information on the Name ID and EMAIL attributes
-
-image::saml/google-sso5.png[Google-sso-featurehub,600]
+    image:google-sso5.png[Google-sso-featurehub,600]
 
 1. Click on "Download metadata"
+    image:google-sso2.png[Google-sso-featurehub,600]
 
-image::saml/google-sso2.png[Google-sso-featurehub,600]
-
-1. In the opened window, copy SSO URL, Entity ID and Certificate. Go to the FeatureHub app - SAML settings page and paste it to the FeatureHub SAML form for your organisation:
-
-image::saml/google-sso3.png[Google-sso-featurehub,600]
-
-image::saml/google-sso4.png[Google-sso-featurehub,600]
-
-
-If you don't want to add users from your organisation with permissions to access FeatureHub app automatically, you can uncheck the box "Automatically add new registered users"
+1. In the opened window, copy SSO URL, Entity ID and Certificate.
+    image:google-sso3.png[Google-sso-featurehub,600]
+    Go to the FeatureHub app - SAML settings page and paste it to the FeatureHub SAML form for your organisation:
+    image:google-sso4.png[Google-sso-featurehub,600]
+    If you don't want to add users from your organisation with permissions to access FeatureHub app automatically, you can uncheck the box "Automatically add new registered users"
 
 1. Once you save the settings, copy the Sign In URL from the page, this will be where your users should go to sign in.
