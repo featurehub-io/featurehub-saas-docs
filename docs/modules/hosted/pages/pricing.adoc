@@ -1,38 +1,41 @@
 = FeatureHub's pricing model
 
-NOTE: For all recent prices please refer to our pricing table on https://featurehub.io/saas[this page]
+NOTE: For all recent prices please refer to our pricing table on https://featurehub.io/pricing[this page]
 
 
 FeatureHub pricing model consists of 2 components:
 
-* Per seat charge - individual users and admin service accounts (fixed price - $7.99 per seat / per month)
-* Metered usage charge (3 usage prices, per API request, TODO: insert price link here)
+* Per seat charge - individual users and admin service accounts (fixed price - $x.xx per seat / per month)
+* Metered usage charge for API requests - either Streaming or REST API ($x.xx per 10,000 requests)
 
 == How does our pricing differ from others?
 
-* Transparent pay-as-you-go pricing
 * Full functionality access
 * No hidden costs
-* Metered price per API request
-* Reasonable “per seat” price, we encourage everyone in your team to have access
+* Low “per seat” price, we encourage everyone in your team to have access
 * Pay for what you use. Metered usage charges directly correlate to your traffic volumes.
 
-== Seats / users pricing
-We price every seat per month, either user or Admin service account, e.g. if you have 25 seats in your organization, you will pay `25 * seat price` at the end of your billing period. Pricing is pro-rated, so if you add or remove users, this will be taken into account.
+== Seats / users pricing (paid in advance)
+We price every seat per month, either regular user or Admin Service Account, e.g. if you have 25 seats in your organization, you will pay `25 * seat price` as soon as you subscribe to our paid service. You are billed for the upcoming billing period in advance. Pricing is pro-rated, if you add or remove users, the relevant amount will be adjusted in your next invoice together with your next billing period charge.
 
-== Pay-as-you-go usage types and pricing
+== Metered usage types and pricing (pay-as-you-go)
 
 === REST API pricing
-We price every request that customers make to our FH servers to get features. A client can choose how often you want to poll for new features. Because of its dynamic nature, we charge per request, e.g. as low as 0.0001(TODO) cent per request. When a request is made, a client will get all feature values for the requested environment for a single application.
+We price every request that customers make to our FH servers to get features and their values. You can choose how often you want to poll for new features. Because of its dynamic nature, we charge per request. When a request is made, a client will get all feature values for the requested environment for a single application (which is defined by the API key).
+`GET request for /features?apiKey=`
 
 === Streaming API pricing
-Similar to the REST API requests, but instead we charge per SSE connection.
+Similar to the REST API requests, but instead we charge per SSE connection request.
+SSE connection initiated via GET request to `/features/{apiKey}` and reconnects automatically every 60 seconds.
 
 === Test API pricing
-Similar to the REST API requests, your PUT requests to FH server (test SDK) will be counted and you will be charged per request. Note, usually when you write tests for FeatureHub, you would use a mix of REST API or Streaming API and Test API. Test API can be found here: TODO
+Similar to the REST API requests, your PUT requests to the FH server https://docs.featurehub.io/featurehub/latest/sdks.html#_test_automation_support[via SDK Test Client] will be counted and you will be charged per request. Note, when you write tests for FeatureHub, you would use a mix of REST API or Streaming API and Test API. There is also an option to use Admin SDK API (ADK) to control feature states.
+`PUT request for `/features?apiKey=`
+
+More info on feature retrieval  https://docs.featurehub.io/featurehub/latest/sdks.html#_receiving_feature_updates[here]
 
 == Billing for FeatureHub with Stripe
-To bill for the usage FeatureHub has integrated with Stripe. We use Stripe's own billing portal, so we do not hold or store any credit card information. Billing is done per month for the seats and for the usage requests as separate items. Seats are calculated on pro rata basis. FeatureHub also offers 30 days of free trial, where customers won't be charged (unless you sign up for paid plan, the free trial will stop) and are not required to provide any credit card details.
+To bill for the paid plan FeatureHub has integrated with Stripe. We use Stripe's own billing portal, so we do not hold or store any credit card information in the FeatureHub platform itself. Billing is done per month for the seats and for the usage requests as separate items for each type. Seats are calculated on pro rata basis. FeatureHub also offers 30 days of free trial, where customers won't be charged and are not required to provide any credit card details. Once you sign up for paid plan, the free trial will stop immediately.
 
 == Managing subscription with Stripe
 You can sign up for the paid plan at any time before your free trial expires. Once you sign up you will become an owner of the subscription, meaning only you will be able to manage it in your organisation. We will be adding a functionality in the future to transfer a subscription to another user in case you leave an organisation.
@@ -43,13 +46,13 @@ You are able to view your current usage on the Billing page (with super admin pe
 == Can I set a limit on the requests?
 Yes, you can set limits on maximum requests you are expecting per billing month/period. When you reach the limit, FeatureHub will continue to serve your features, however you will not be able to update them.
 
-== How do you charge if I do not use FeatureHub dashboard and use programmatic access to the FeatureHub's Management Repository API via FeatureHub ADK?
+== How long is the free trial?
+Free trial is available per organization for 30 days once an organization is created. Free trial ends either after 30 days or as soon as organization admin signs up for a paid plan.
+
+== Will you charge a fee if I do not use FeatureHub dashboard and use programmatic access to the FeatureHub's Management Repository API via FeatureHub ADK?
 
 To be able to use Management repository API, you need to create Admin Service Account which will be counted towards a “seat” charge. For example, if you create 2 Admin service accounts - one for the non-production environments permissions and the other for the production environments - you will be charged for 2 seats.
 
-== Why is FeatureHub not charging per MAU?
-Every MAU is not “worth” the same money to a customer - a MAU that spends 10 minutes on their site is not of the same worth as one that spends 2 weeks on the site, and shouldn’t cost the same amount
-We don’t have graduations - a single seat company with 2000 MAUs is possible on FH, and not on Launch Darkley, for example - you have to be Pro user at a higher per seat charge.
 
 
 
