@@ -28,6 +28,8 @@ We price every request that customers make to our FH servers to get features and
 Similar to the REST API requests, but instead we charge per SSE connection request.
 SSE connection initiated via GET request to `/features/{apiKey}` and reconnects automatically every 60 seconds.
 
+NOTE: SSE connection can only be made with client evaluated API keys and not supported with server evaluated API keys.
+
 === Test API pricing
 Similar to the REST API requests, your PUT requests to the FH server https://docs.featurehub.io/featurehub/latest/sdks.html#_test_automation_support[via SDK Test Client] will be counted and you will be charged per request. Note, when you write tests for FeatureHub, you would use a mix of REST API or Streaming API and Test API. There is also an option to use Admin SDK API (ADK) to control feature states.
 `PUT request for `/features?apiKey=`
