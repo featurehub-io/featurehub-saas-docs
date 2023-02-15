@@ -37,7 +37,7 @@ Similar to the REST API requests, your PUT requests to the FH server https://doc
 More info on feature retrieval  https://docs.featurehub.io/featurehub/latest/sdks.html#_receiving_feature_updates[here]
 
 == Billing for FeatureHub with Stripe
-To bill for the paid plan FeatureHub has integrated with Stripe. We use Stripe's own billing portal, so we do not hold or store any credit card information in the FeatureHub platform itself. Billing is done per month for the seats and for the usage requests as separate items for each type. Seats are calculated on pro rata basis. FeatureHub also offers 30 days of free trial, where customers won't be charged and are not required to provide any credit card details. Once you sign up for paid plan, the free trial will stop immediately.
+To bill for the paid plan FeatureHub has integrated with Stripe. We use Stripe's own billing portal, so we do not hold or store any credit card information in the FeatureHub platform itself. Billing is done per month for the seats and for the usage requests as separate price items for each type. Seats are calculated on pro rata basis. FeatureHub also offers 30 days of free trial, where customers won't be charged and are not required to provide any credit card details. Once you sign up for paid plan, the free trial will stop immediately.
 
 == Managing subscription with Stripe
 You can sign up for the paid plan at any time before your free trial expires. Once you sign up you will become an owner of the subscription, meaning only you will be able to manage it in your organisation. We will be adding a functionality in the future to transfer a subscription to another user in case you leave an organisation.
@@ -46,7 +46,7 @@ You can sign up for the paid plan at any time before your free trial expires. On
 You are able to view your current usage on the Billing page (with super admin permissions).
 
 == Can I set a limit on the requests?
-Yes, you can set limits on maximum requests you are expecting per billing month/period. When you reach the limit, FeatureHub will continue to serve your features, however you will not be able to update them.
+If you are looking for a way to limit the requests or reduce your requests, you can set limits on when to stop polling or streaming updates, e.g. once you hit 50,000 requests - stop further polling or streaming requests. This setting is per billing month/period. Note, when you reach the limit, FeatureHub will continue to serve your features when your clients or server reconnect, however subsequent polling and streaming updates won't be performed. By using this setting you can reduce the number of requests/connections. But bear in mind once connection is made, a client won't be receiving real-time updates.
 
 == How long is the free trial?
 Free trial is available per organization for 30 days once an organization is created. Free trial ends either after 30 days or as soon as organization admin signs up for a paid plan.
