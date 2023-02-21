@@ -1,0 +1,5 @@
+= FeatureHub SaaS (Beta)
+
+Welcome to the FeatureHub SaaS documentation pages.
+
+If you would like to sign up for a paid version FeatureHub SaaS (Beta) please leave us a message here: https://www.featurehub.io/hosted
