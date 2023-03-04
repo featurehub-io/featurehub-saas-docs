@@ -30,9 +30,9 @@
 1. Follow steps 1-5 https://apps.google.com/supportwidget/articlehome?hl=en&article_url=https%3A%2F%2Fsupport.google.com%2Fa%2Fanswer%2F6087519%3Fhl%3Den&product_context=6087519&product_name=UnuFlow&trigger_context=a[here]
 
 1. Provide the following details on the Google Identity Provider Page:
-        * `ACS URL: https://app.featurehub.dev/saml/your-company-name/sso`
-        * `Entity ID: https://app.featurehub.dev/saml/your-company-name/metadata`
-        * `Start URL: https://app.featurehub.dev/saml/your-company-name/auth`
+        * `ACS URL: https://app.featurehub.io/saml/your-company-name/sso`
+        * `Entity ID: https://app.featurehub.io/saml/your-company-name/metadata`
+        * `Start URL: https://app.featurehub.io/saml/your-company-name/auth`
         ** Note: "your-company-name" value should be the same as "suffix" value when you provide SSO setup details on the FeatureHub settings.
 
 1. Check the box: "Signed response"

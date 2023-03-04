@@ -43,13 +43,15 @@ To bill for the paid plan FeatureHub has integrated with Stripe. We use Stripe's
 You can sign up for the paid plan at any time before your free trial expires. Once you sign up you will become an owner of the subscription, meaning only you will be able to manage it in your organisation. We will be adding a functionality in the future to transfer a subscription to another user in case you leave an organisation.
 
 == Where can I view my current spent?
-You are able to view your current usage on the Billing page (with super admin permissions).
+Once you sign up for a paid plan, you are able to view your current usage on the Billing page (with super admin permissions).
 
 == Can I set a limit on the requests?
 If you are looking for a way to limit the requests or reduce your requests, you can set limits on when to stop polling or streaming updates, e.g. once you hit 50,000 requests - stop further polling or streaming requests. This setting is per billing month/period. Note, when you reach the limit, FeatureHub will continue to serve your features when your clients or server reconnect, however subsequent polling and streaming updates won't be performed. By using this setting you can reduce the number of requests/connections. But bear in mind once connection is made, a client won't be receiving real-time updates.
 
 == How long is the free trial?
 Free trial is available per organization for 30 days once an organization is created. Free trial ends either after 30 days or as soon as organization admin signs up for a paid plan.
+
+NOTE: Number of requests is limited on a free trial to 10,000 in total across all 3 types.
 
 == Will you charge a fee if I do not use FeatureHub dashboard and use programmatic access to the FeatureHub's Management Repository API via FeatureHub ADK?
 
