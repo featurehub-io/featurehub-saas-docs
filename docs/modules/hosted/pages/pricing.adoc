@@ -21,18 +21,17 @@ We price every seat per month, either regular user or Admin Service Account, e.g
 == Metered usage types and pricing (pay-as-you-go)
 
 === REST API pricing
-We price every request that customers make to our FH servers to get features and their values. You can choose how often you want to poll for new features. Because of its dynamic nature, we charge per request. When a request is made, a client will get all feature values for the requested environment for a single application (which is defined by the API key).
+We price every request that customers make to our FH servers to get features and their values. That is also during polling, each request you make is counted separately. You can choose how often you want to poll for new features. When a request is made, a client will get all feature values for the requested environment for a single application (which is defined by the API key). We price requests in batches, e.g. per 10,000.
 `GET request for /features?apiKey=`
 
 === Streaming API pricing
 Similar to the REST API requests, but instead we charge per SSE connection request.
-SSE connection initiated via GET request to `/features/{apiKey}` and reconnects automatically every 60 seconds. Every reconnect is counted towards charges as 1  request.
+SSE connection initiated via GET request to `/features/{apiKey}` and reconnects automatically every 60 seconds. Every reconnect is counted towards charges as 1  request. Similar to REST Get requests we price requests in batches, e.g. per 10,000.
 
 NOTE: SSE connection can only be made with client evaluated API keys and not supported with server evaluated API keys.
 
 === Test API pricing
-Similar to the REST API requests, your PUT requests to the FH server https://docs.featurehub.io/featurehub/latest/sdks.html#_test_automation_support[via SDK Test Client] will be counted and you will be charged per request. Note, when you write tests for FeatureHub, you would use a mix of REST API or Streaming API and Test API. There is also an option to use Admin SDK API (ADK) to control feature states.
-`PUT request for `/features?apiKey=`
+We charge per each PUT requests to the FH server https://docs.featurehub.io/featurehub/latest/sdks.html#_test_automation_support[via SDK Test Client] to `/features?apiKey=`. Note, when you write tests for FeatureHub, you would use a mix of REST API or Streaming API and Test API. There is also an option to use Admin SDK API (ADK) to control feature states.
 
 More info on feature retrieval  https://docs.featurehub.io/featurehub/latest/sdks.html#_receiving_feature_updates[here]
 
