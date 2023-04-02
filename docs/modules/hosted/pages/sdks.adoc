@@ -1,0 +1,12 @@
+= SDKs usage with SaaS platform
+
+All out SDKs that are available for the FeatureHub Open Source are compatible with FeatureHub SaaS. You can find detailed documentation
+ xref:ROOT:sdks.adoc[here]
+
+== Getting SDK URL
+
+Usually to establish connection to FeatureHub via SDK you are required to provide base (Edge) URL and an API key which is unique for each environment and application.
+
+You can find and copy the base URL (Edge URL) as well as API Keys from the Api Keys page.
+
+image:api-keys.png[Api-keys-featurehub,600]

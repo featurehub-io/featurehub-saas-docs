@@ -1,5 +1,7 @@
 = SSO (Single sign-on) / SAML setup
 
+FeatureHub SaaS comes with an option to setup SSO/SAML for your organisation. This is an optional setting that an organization owner (super admin) can configure for their account. You are not required to pay any extra amount for setting up SSO/SAML.
+
 == Azure AD SSO/SAML setup
 
 1. Create FeatureHub application in the "Enterprise Applications" page and go to the Single Sign-On setup screen.
