@@ -2,4 +2,5 @@
 
 Welcome to the FeatureHub SaaS documentation pages.
 
-If you would like to sign up for a paid version FeatureHub SaaS (Beta) please leave us a message here: https://www.featurehub.io/hosted
+You can sign in / sign up for the FeatureHub cloud service https://app.featurehub.io[here].
+
