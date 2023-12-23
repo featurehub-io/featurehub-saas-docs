@@ -1,4 +1,4 @@
-= FeatureHub SaaS (Beta)
+= FeatureHub SaaS
 
 Welcome to the FeatureHub SaaS documentation pages.
 

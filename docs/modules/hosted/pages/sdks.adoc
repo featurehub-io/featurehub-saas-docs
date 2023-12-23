@@ -5,8 +5,17 @@ All out SDKs that are available for the FeatureHub Open Source are compatible wi
 
 == Getting SDK URL
 
-Usually to establish connection to FeatureHub via SDK you are required to provide base (Edge) URL and an API key which is unique for each environment and application.
+To establish connection to FeatureHub via an SDK you are required to provide base (Edge) URL and an API key which is unique for each environment and application.
 
 You can find and copy the base URL (Edge URL) as well as API Keys from the Api Keys page.
 
 image:api-keys.png[Api-keys-featurehub,600]
+
+== Getting ADK URL (Admin API SDK)
+
+Admin service accounts are used for programmatic access to your FeatureHub organization. For example, you can use it to create applications, environments, features and perform operations on features. This can be useful for automation, e.g. test automation, CI/CD pipelines etc. In FeatureHub SaaS you can find the base URL for the ADK on the Admin Service Account page with appropriate permissions (Portfolio Admin or Organization Super Admin).
+More details can be found  xref:ROOT:admin-development-kit.adoc[here]
+
+image:admin-sdk-base-url.png[api-base-url-featurehub,600]
+
+
