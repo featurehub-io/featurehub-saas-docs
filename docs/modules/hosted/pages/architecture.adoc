@@ -1,0 +1,12 @@
+= FeatureHub SaaS Architecture
+
+== Overview
+
+TODO: insert simple diagram showing Fastly caching in the middle
+
+== FAQs
+
+=== What happens if FH server goes down?
+
+It is possible in rare events that in can go down. As feature values get cached by Fastly, a customer will keep getting latest served value. For example, if you are using a server app, your users wouldn’t experience a problem. However, if you are serving features via bowser app, users would lose the feature value when browser app reinitialises, e.g. on page refresh.
+
