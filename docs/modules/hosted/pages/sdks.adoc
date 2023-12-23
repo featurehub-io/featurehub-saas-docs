@@ -1,6 +1,6 @@
 = SDKs usage with SaaS platform
 
-All out SDKs that are available for the FeatureHub Open Source are compatible with FeatureHub SaaS. You can find detailed documentation
+All our SDKs that are available for the FeatureHub Open Source are compatible with FeatureHub SaaS. You can find detailed documentation
  xref:ROOT:sdks.adoc[here]
 
 == Getting SDK URL

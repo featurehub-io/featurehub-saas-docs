@@ -10,7 +10,7 @@ FeatureHub pricing model consists of 2 components:
 
 == How does our pricing differ from others?
 
-* Full functionality access
+* Access to all features/capabilities
 * No hidden costs
 * Low “per seat” price, we encourage everyone in your team to have access
 * Pay for what you use. Metered usage charges directly correlate to your traffic volumes.
@@ -26,20 +26,20 @@ We price every request that customers make to our FH servers to get features and
 
 === Streaming API pricing
 Similar to the REST API requests, but instead we charge per SSE connection request.
-SSE connection initiated via GET request to `/features/{apiKey}` and reconnects automatically every 60 seconds. Every reconnect is counted towards charges as 1  request. Similar to REST Get requests we price requests in batches, e.g. per 10,000.
+SSE connection initiated via GET request to `/features/{apiKey}` and reconnects automatically every 60 seconds. Every reconnect is counted towards charges as 1  request. Similar to GET requests, we price streaming requests in batches, e.g. per 10,000.
 
 NOTE: SSE connection can only be made with client evaluated API keys and not supported with server evaluated API keys.
 
 === Test API pricing
-We charge per each PUT requests to the FH server https://docs.featurehub.io/featurehub/latest/sdks.html#_test_automation_support[via SDK Test Client] to `/features?apiKey=`. Note, when you write tests for FeatureHub, you would use a mix of REST API or Streaming API and Test API. There is also an option to use Admin SDK API (ADK) to control feature states.
+We charge per each PUT requests to the FH server via https://docs.featurehub.io/featurehub/latest/sdks.html#_test_automation_support[SDK Test Client] to `/features?apiKey=`. Typically, when you write tests, you would use a mix of REST API or Streaming API and Test API. There is also an option to use Admin SDK API (ADK) to control feature states.
 
-More info on feature retrieval  https://docs.featurehub.io/featurehub/latest/sdks.html#_receiving_feature_updates[here]
+More info on feature values retrieval  https://docs.featurehub.io/featurehub/latest/sdks.html#_receiving_feature_updates[here]
 
 == Billing for FeatureHub with Stripe
-To bill for the paid plan FeatureHub has integrated with Stripe. We use Stripe's own billing portal, so we do not hold or store any credit card information in the FeatureHub platform itself. Billing is done per month for the seats and for the usage requests as separate price items for each type. Seats are calculated on pro rata basis. FeatureHub also offers 30 days of free trial, where customers won't be charged and are not required to provide any credit card details. Once you sign up for paid plan, the free trial will stop immediately.
+FeatureHub has integrated with Stripe to provide billing support. We use Stripe Customer Portal, so we do not hold or store any credit card information in the FeatureHub platform itself. Billing is done per month for the seats and for the usage requests (separate price for each request type). Seats are calculated on pro rata basis. FeatureHub also offers 30 days free trial, where customers won't be charged and are not required to provide any credit card details. Once you sign up for paid plan, the free trial will stop immediately.
 
 == Managing subscription with Stripe
-You can sign up for the paid plan at any time before your free trial expires. Once you sign up you will become a billing admin of the subscription, meaning you will be able to manage it in your organisation via Stripe Customer Portal. You can also assign billing role to other users in your organisation. The option is available on the Users page.
+You can sign up for the paid plan at any time before your free trial expires. Once you sign up you will become a billing admin of the subscription, meaning you will be able to manage it in your organisation via Stripe Customer Portal. You can also assign billing role to other users in your organisation. This option is available on the Users page.
 
 image:billing-admin.png[billing-admin,600]
 
@@ -48,14 +48,14 @@ image:billing-admin.png[billing-admin,600]
 Once you sign up for a paid plan, you are able to view your current usage on the Billing page (with billing admin permission).
 
 == Can I set a limit on the requests?
-If you are looking for a way to limit the requests or reduce your requests, you can set limits on when to stop polling or streaming updates, e.g. once you hit 50,000 requests - stop further polling or streaming requests. This setting is per billing month/period. Note, when you reach the limit, FeatureHub will continue to serve your features when your clients or server reconnect, however subsequent polling and streaming updates won't be performed. By using this setting you can reduce the number of requests/connections. But bear in mind once connection is made, a client won't be receiving real-time updates.
+If you are looking for a way to limit the requests or reduce your requests, you can set limits on when to stop polling or streaming updates, e.g. once you hit 50,000 requests - stop further polling or streaming requests. This setting is per billing month/period. Note, when you reach the limit, FeatureHub will continue to serve your features when your clients or server reconnects, however subsequent polling and streaming updates won't be performed. By using this setting you can reduce the number of requests/connections. But bear in mind once connection is made, a client won't be receiving real-time updates.
 
 == How long is the free trial?
 Free trial is available per organization for 30 days once an organization is created. Free trial ends either after 30 days or as soon as organization admin signs up for a paid plan. They will automatically get assigned a billing role.
 
 NOTE: Number of requests is limited on a free trial to 10,000 in total across all 3 types.
 
-== Will you charge a fee if I do not use FeatureHub dashboard and use programmatic access to the FeatureHub's Management Repository API via FeatureHub ADK?
+== Will you charge a fee if I do not use FeatureHub web app and use programmatic access to the FeatureHub's Management Repository API via FeatureHub ADK?
 
 To be able to use Management repository API, you need to create Admin Service Account which will be counted towards a “seat” charge. For example, if you create 2 Admin service accounts - one for the non-production environments permissions and the other for the production environments - you will be charged for 2 seats.
 
