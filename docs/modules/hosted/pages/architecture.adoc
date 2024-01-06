@@ -2,27 +2,18 @@
 
 == Overview
 
-FeatureHub SaaS is very much like the Open Source version of FeatureHub.
-We have a few more services to support multi-tenanting, multi-customer setup and management, billing, and usage statistics, but otherwise what is available to users of FHOS is what is exposed in SaaS - we have our committment to Open Source.
+FeatureHub SaaS architecture is based on the Open Source version of FeatureHub with an addition of several services to support multi-tenanting, multi-customer setup and management, billing, and usage statistics.
 
-== SDK Deployment Architecture
-
-Where folk often want to know more detail is in how they are affected and how reliable we are. We offer a high uptime assurance and rely on our partners - Google Cloud and Fastly for those capabilities.
+FeatureHub SaaS offers a high uptime out of the box by relying on our partners - Google Cloud and Fastly CDN. Unlike in the Open Source version, where you may need to take care of high availability of FeatureHub service by yourself, depending on how and where you host your instance.
 
 image:saas-cache-architecture.svg[SaaS SDK Architecture]
 
-Particularly with Fastly, they offer a worldwide cache that offers many points of presence around the world, ensuring responses to your servers and clients are very fast. They also offer fast cache invalidation - which we use to ensure that when you update your features, Fastly knows that it needs to fetch an update.
-
-Fastly also caches our Streaming API, and makes it far faster and cheaper to provide this to our customers.
-
-Even if FeatureHub becomes unavailable for a short time, you know your features are safe in Fastly.
+Fastly CDN cache offers many points of presence around the world, ensuring responses to your servers and clients are delivered in near real-time. Fastly also offers fast cache invalidation - which FeatureHub SaaS uses to ensure that when you update your features, Fastly fetches an update.
 
 == FAQs
 
 === What happens if FH server goes down?
 
-It is possible in rare events that in can go down. As feature values get cached by Fastly, a customer will keep getting latest served value.
-
-Fastly caches environment features and updates them based on an _invalidation scheme_. This means, it will continue to serve them forever unless they get invalidated - which happens when they get updated.
+It is possible in rare events for FeatureHub SaaS service to be unavailable for a short period of time. However, because feature values are being cached by Fastly CDN, your customers will continue getting latest stored values without interrupting their experience.
 
 
