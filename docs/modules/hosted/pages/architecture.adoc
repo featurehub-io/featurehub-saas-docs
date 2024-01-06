@@ -6,7 +6,7 @@ FeatureHub SaaS architecture is based on the Open Source version of FeatureHub w
 
 FeatureHub SaaS offers a high uptime out of the box by relying on our partners - Google Cloud and Fastly CDN. Unlike in the Open Source version, where you may need to take care of high availability of FeatureHub service by yourself, depending on how and where you host your instance.
 
-image:saas-cache-architecture.svg[SaaS SDK Architecture]
+image:saas-cache-architecture.svg[SaaS Architecture]
 
 Fastly CDN cache offers many points of presence around the world, ensuring responses to your servers and clients are delivered in near real-time. Fastly also offers fast cache invalidation - which FeatureHub SaaS uses to ensure that when you update your features, Fastly fetches an update.
 
