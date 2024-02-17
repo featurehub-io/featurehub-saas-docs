@@ -48,7 +48,11 @@ image:billing-admin.png[billing-admin,600]
 Once you sign up for a paid plan, you are able to view your current usage on the Billing page (with billing admin permission).
 
 == Can I set a limit on the requests?
-If you are looking for a way to limit the requests or reduce your requests, you can set limits on when to stop polling or streaming updates, e.g. once you hit 50,000 requests - stop further polling or streaming requests. This setting is per billing month/period. Note, when you reach the limit, FeatureHub will continue to serve your features when your clients or server reconnects, however subsequent polling and streaming updates won't be performed. By using this setting you can reduce the number of requests/connections. But bear in mind once connection is made, a client won't be receiving real-time updates.
+If you are looking for a way to limit the requests or reduce your requests, you can set limits on when to stop polling or streaming updates, e.g. once you hit 50,000 requests - stop further polling or streaming requests. This setting is per billing month/period.
+
+NOTE: When you reach the limit, FeatureHub will continue to serve your features when your clients or server reconnects, however subsequent polling and streaming updates won't be performed. By using this setting you can reduce the number of requests/connections. But bear in mind once connection is made, a client won't be receiving real-time updates.
+
+TIP: If you are using REST API method, you have the flexibility to reduce the costs by adjusting the frequency of REST requests made to FeatureHub. You can do so, by adjusting the polling interval to the desired number of seconds in the FeatureHub SDKs.
 
 == How long is the free trial?
 Free trial is available per organization for 30 days once an organization is created. Free trial ends either after 30 days or as soon as organization admin signs up for a paid plan. They will automatically get assigned a billing role.
