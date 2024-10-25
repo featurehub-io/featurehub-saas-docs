@@ -51,7 +51,7 @@ Once you sign up for a paid plan, you are able to view your current usage on the
 == Can I set a limit on the requests?
 If you are looking for a way to limit the requests or reduce your requests, you can set limits on when to stop polling or streaming updates, e.g. once you hit 50,000 requests - stop further polling or streaming requests. This setting is per billing month/period.
 
-IMPORTANT: When you reach the limit, FeatureHub will continue to serve your features when your clients or server reconnects, however subsequent polling and streaming updates won't be performed. By using this setting you can reduce the number of requests/connections. But bear in mind once connection is made, a client won't be receiving real-time updates.
+IMPORTANT: When you reach the limit, FeatureHub will continue to serve your features when your clients or server reconnects, however subsequent polling and streaming updates won't be performed, this includes real-time updates. By using this setting you can reduce the number of requests/connections. Reconnections still count towards request charges, so setting a limit does not mean that your requests will stop completely. When limit is reached and request is made, SDK will return 236 code and log a message similar to this `featurehub: this environment has gone stale and will not receive any further updates`
 
 TIP: If you are using REST API method, you have the flexibility to reduce the costs by adjusting the frequency of REST requests made to FeatureHub. You can do so, by adjusting the polling interval to the desired number of seconds in the FeatureHub SDKs.
 
